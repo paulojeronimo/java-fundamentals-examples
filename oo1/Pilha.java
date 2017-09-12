@@ -1,28 +1,28 @@
 public class Pilha {
   int quantidade;
-  Vinho[] vinhos;
+  Object[] objects;
   int posicao;
 
   public Pilha(int quantidade) {
     this.quantidade = quantidade;
-    vinhos = new Vinho[quantidade];
+    objects = new Object[quantidade];
   }
 
-  boolean inserir(Vinho vinho) {
+  boolean inserir(Object object) {
     if (posicao >= quantidade)
       return false;
       
-    vinhos[posicao++] = vinho;
+    objects[posicao++] = object;
     return true;
   }
 
-  Vinho remover() {
-    if (temVinhos())
-      return vinhos[--posicao];
+  Object remover() {
+    if (temObjects())
+      return objects[--posicao];
     return null;
   }
 
-  boolean temVinhos() {
+  boolean temObjects() {
     return posicao > 0;
   }
 }

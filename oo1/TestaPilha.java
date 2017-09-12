@@ -1,6 +1,6 @@
 public class TestaPilha {
   public static void main(String[] args) {
-    Pilha adega = new Pilha(3);
+    PilhaDeVinhos adega = new PilhaDeVinhos(3);
 
     Vinho santaFelicidade = new Vinho("Santa Felicidade", "Chile", "Cabernet", "Amadeirado", "Tinto");
     santaFelicidade.engarrafar(2010);
@@ -17,7 +17,7 @@ public class TestaPilha {
 
     Vinho vinho = null;
     while (adega.temVinhos()) {
-      vinho = adega.remover();
+      vinho = (Vinho) adega.remover();
       System.out.println("Hoje irei beber o vinho " + vinho.nome + " engarrafado em " + vinho.ano);
     }
   }
