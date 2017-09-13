@@ -1,3 +1,5 @@
+import util.Pilha;
+
 public class TestaPilhaDeLivros {
   public static void main(String[] args) {
     Autor autor1 = new Autor();
