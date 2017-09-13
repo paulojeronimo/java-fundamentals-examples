@@ -1,8 +1,13 @@
 package entidades;
 
 public class Pessoa {
-  public String nome;
-  public int idade;
-  public enum Sexo { MASCULINO, FEMININO };
-  public Sexo sexo;
+  private String nome;
+  private int idade;
+  private enum Sexo { MASCULINO, FEMININO };
+  private Sexo sexo;
+
+  public String getNome() { return nome; }
+  public void setNome(String nome) { this.nome = nome; }
+
+  // TODO: criar o restante dos gets e sets
 }
