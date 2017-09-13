@@ -1,4 +1,6 @@
 import util.Pilha;
+import entidades.Autor;
+import entidades.Livro;
 
 public class TestaPilhaDeLivros {
   public static void main(String[] args) {

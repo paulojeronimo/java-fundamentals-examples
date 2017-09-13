@@ -1,3 +1,5 @@
+import entidades.Vinho;
+
 public class TestaPilha {
   public static void main(String[] args) {
     PilhaDeVinhos adega = new PilhaDeVinhos(3);
@@ -18,7 +20,7 @@ public class TestaPilha {
     Vinho vinho = null;
     while (adega.temVinhos()) {
       vinho = (Vinho) adega.remover();
-      System.out.println("Hoje irei beber o vinho " + vinho.nome + " engarrafado em " + vinho.ano);
+      System.out.println("Hoje irei beber o vinho " + vinho.getNome() + " engarrafado em " + vinho.getAno());
     }
   }
 }

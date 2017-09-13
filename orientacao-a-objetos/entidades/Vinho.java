@@ -1,10 +1,12 @@
+package entidades;
+
 public class Vinho {
-  String nome;
-  String origem;
-  String uva;
-  String sabor;
-  String cor;
-  int ano;
+  private String nome;
+  private String origem;
+  private String uva;
+  private String sabor;
+  private String cor;
+  private int ano;
 
   public Vinho(String nome, String origem, String uva, String sabor, String cor) {
     this.nome = nome;
@@ -14,11 +16,19 @@ public class Vinho {
     this.cor = cor;
   }
 
-  void engarrafar(int ano) {
+  public void engarrafar(int ano) {
     System.out.printf("Engarrafando o vinho \"%s\" em %d\n", nome, ano);
     this.ano = ano;
   }
 
-  void abrir() {
+  public void abrir() {
+  }
+
+  public String getNome() {
+    return nome;
+  }
+
+  public int getAno() {
+    return ano;
   }
 }
