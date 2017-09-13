@@ -7,10 +7,10 @@ public class Livro {
   private Autor[] autores;
 
   public String getTitulo() { return titulo; }
-  public void setTitulo(String titulo) { this.titulo = titulo; }
+  public void setTitulo(final String titulo) { this.titulo = titulo; }
 
   public Autor[] getAutores() { return autores; }
-  public void setAutores(Autor[] autores) { this.autores = autores; }
+  public void setAutores(final Autor[] autores) { this.autores = autores; }
 
   // TODO: criar o restante dos gets e sets
 }
