@@ -3,6 +3,24 @@ import entidades.Autor;
 import entidades.Livro;
 
 public class TestaPilhaDeLivros {
+
+  static String imprimeAutores(Autor[] autores) {
+    if (autores == null)
+      return "Desconhecido";
+    StringBuilder sb = new StringBuilder();
+    for(Autor autor: autores) {
+      String nomeCompleto = autor.getNome();
+      String primeiroNome = nomeCompleto.substring(0, nomeCompleto.indexOf(" "));
+      String ultimoNome = nomeCompleto.substring(nomeCompleto.indexOf(" ")+1);
+      sb.append(ultimoNome);
+      sb.append(", ");
+      sb.append(primeiroNome);
+      sb.append(" / ");
+    }
+    String result = sb.toString();
+    return result.substring(0, result.lastIndexOf("/")-1);
+  }
+
   public static void main(String[] args) {
     Autor autor1 = new Autor();
     autor1.setNome("Gelson Iezzi");
@@ -10,7 +28,7 @@ public class TestaPilhaDeLivros {
     Livro matematica1 = new Livro();
     matematica1.setTitulo("Matematica 1");
     matematica1.setAutores(new Autor[] { autor1, new Autor() });
-    matematica1.getAutores()[1].setNome("Amigo do Gelson");
+    matematica1.getAutores()[1].setNome("Carlos Murakami");
 
     Livro aOrigemDasEspecies = new Livro();
     aOrigemDasEspecies.setTitulo("A Origem das Espécies");
@@ -22,7 +40,8 @@ public class TestaPilhaDeLivros {
     Livro livro = null;
     while (estante.temObjects()) {
       livro = (Livro) estante.remover();
-      System.out.printf("Agora eu vou ler o livro \"%s\"\n", livro.getTitulo());
+      System.out.printf("Agora eu vou ler o livro \"%s\" do(s) autor(es) \"%s\"\n",
+        livro.getTitulo(), imprimeAutores(livro.getAutores()));
     }
   }
 }
