@@ -1,3 +1,5 @@
+package util;
+
 public class Pilha {
   int quantidade;
   Object[] objects;
@@ -8,7 +10,7 @@ public class Pilha {
     objects = new Object[quantidade];
   }
 
-  boolean inserir(Object object) {
+  public boolean inserir(Object object) {
     if (posicao >= quantidade)
       return false;
       
@@ -16,13 +18,13 @@ public class Pilha {
     return true;
   }
 
-  Object remover() {
+  public Object remover() {
     if (temObjects())
       return objects[--posicao];
     return null;
   }
 
-  boolean temObjects() {
+  public boolean temObjects() {
     return posicao > 0;
   }
 }
