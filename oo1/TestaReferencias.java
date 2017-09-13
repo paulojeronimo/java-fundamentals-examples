@@ -17,8 +17,11 @@ class CameraDeVideo {
 public class TestaReferencias {
   public static void main(String args[]) {
     CameraDeVideo remoto1 = new CameraDeVideo();
-    CameraDeVideo remoto2 = remoto1;
-    //CameraDeVideo remoto2 = new CameraDeVideo();
+    //CameraDeVideo remoto2 = remoto1;
+    CameraDeVideo remoto2 = new CameraDeVideo();
+
+    System.out.println("remoto1 = " + remoto1);
+    System.out.println("remoto2 = " + remoto2);
 
     remoto1.ligar();
     remoto2.desligar();
