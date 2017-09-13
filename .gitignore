@@ -1,1 +1,3 @@
 *.class
+/netbeans/JavaApplication1/nbproject/private/
+/netbeans/JavaApplication1/build/
