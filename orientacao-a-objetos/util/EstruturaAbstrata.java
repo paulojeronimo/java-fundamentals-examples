@@ -1,6 +1,6 @@
 package util;
 
-abstract class EstruturaAbstrata {
+abstract class EstruturaAbstrata implements InsereContemRemove {
   protected int quantidade;
   protected Object[] objects;
   protected int posicao;
@@ -16,9 +16,9 @@ abstract class EstruturaAbstrata {
     return true;
   }
 
-  public abstract Object remover();
-
-  public boolean temObjects() {
+  public boolean contemObjetos() {
     return posicao > 0;
   } 
+
+  public abstract Object remover();
 }

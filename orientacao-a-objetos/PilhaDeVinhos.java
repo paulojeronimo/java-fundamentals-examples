@@ -6,6 +6,6 @@ public class PilhaDeVinhos extends Pilha {
   }
 
   boolean temVinhos() {
-    return temObjects();
+    return contemObjetos();
   } 
 }

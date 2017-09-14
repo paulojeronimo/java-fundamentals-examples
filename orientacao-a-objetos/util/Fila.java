@@ -7,7 +7,7 @@ public class Fila extends EstruturaAbstrata {
 
   @Override
   public Object remover() {
-    if (!temObjects()) return null;
+    if (!contemObjetos()) return null;
     Object resultado = objects[0];
     posicao--;
     for (int i = 0; i < posicao; i++)

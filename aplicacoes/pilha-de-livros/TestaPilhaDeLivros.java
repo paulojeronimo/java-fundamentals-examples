@@ -38,7 +38,7 @@ public class TestaPilhaDeLivros {
     estante.inserir(aOrigemDasEspecies);
 
     Livro livro = null;
-    while (estante.temObjects()) {
+    while (estante.contemObjetos()) {
       livro = (Livro) estante.remover();
       System.out.printf("Agora eu vou ler o livro \"%s\" do(s) autor(es) \"%s\"\n",
         livro.getTitulo(), imprimeAutores(livro.getAutores()));

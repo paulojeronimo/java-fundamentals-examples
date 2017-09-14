@@ -7,6 +7,6 @@ public class Pilha extends EstruturaAbstrata {
 
   @Override
   public Object remover() {
-    return temObjects() ? objects[--posicao] : null;
+    return contemObjetos() ? objects[--posicao] : null;
   }
 }
