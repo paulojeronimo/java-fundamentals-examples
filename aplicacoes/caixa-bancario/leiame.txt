@@ -1,0 +1,15 @@
+Exercício: complete o programa de forma que seja possível executá-lo conforme a seguir:
+
+$ ./run.sh 3
+Gerando a senha 1
+Gerando a senha 2
+Gerando a senha 3
+Atendendo a senha 1
+Atendendo a senha 2
+Atendendo a senha 3
+
+NOTAS:
+
+1) No Windows, utilize: "run 3".
+2) Crie as classes necessárias de forma a fazer classe AtendimentoCaixa compilar/executar. Essa classe, entretanto, não deve ser alterada.
+3) Para compilar, utilize o comando "build".
