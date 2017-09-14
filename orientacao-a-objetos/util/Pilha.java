@@ -1,15 +1,12 @@
 package util;
 
-public class Pilha {
-  private int quantidade;
-  private Object[] objects;
-  private int posicao;
-
+public class Pilha extends EstruturaAbstrata {
   public Pilha(int quantidade) {
     this.quantidade = quantidade;
     objects = new Object[quantidade];
   }
 
+  @Override
   public boolean inserir(Object object) {
     if (posicao >= quantidade)
       return false;
@@ -18,12 +15,14 @@ public class Pilha {
     return true;
   }
 
+  @Override
   public Object remover() {
     if (temObjects())
       return objects[--posicao];
     return null;
   }
 
+  @Override
   public boolean temObjects() {
     return posicao > 0;
   }
