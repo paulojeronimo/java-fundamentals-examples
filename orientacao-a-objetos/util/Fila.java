@@ -2,15 +2,7 @@ package util;
 
 public class Fila extends EstruturaAbstrata {
   public Fila(int quantidade) {
-    this.quantidade = quantidade;
-    objects = new Object[quantidade];
-  }
-
-  @Override
-  public boolean inserir(Object object) {
-    if (posicao >= quantidade) return false;
-    objects[posicao++] = object;
-    return true;
+    super(quantidade);
   }
 
   @Override
@@ -22,10 +14,5 @@ public class Fila extends EstruturaAbstrata {
       objects[i] = objects[i+1];
     objects[posicao] = null;
     return resultado;
-  }
-
-  @Override
-  public boolean temObjects() {
-    return posicao > 0;
   }
 }

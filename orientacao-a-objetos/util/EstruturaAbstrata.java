@@ -5,7 +5,20 @@ abstract class EstruturaAbstrata {
   protected Object[] objects;
   protected int posicao;
 
-  public abstract boolean inserir(Object object);
+  protected EstruturaAbstrata(int quantidade) {
+    this.quantidade = quantidade;
+    objects = new Object[quantidade];
+  }
+
+  public boolean inserir(Object object) {
+    if (posicao >= quantidade) return false;
+    objects[posicao++] = object;
+    return true;
+  }
+
   public abstract Object remover();
-  public abstract boolean temObjects();
+
+  public boolean temObjects() {
+    return posicao > 0;
+  } 
 }
