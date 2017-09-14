@@ -1,9 +1,9 @@
 package util;
 
 public class Pilha {
-  int quantidade;
-  Object[] objects;
-  int posicao;
+  private int quantidade;
+  private Object[] objects;
+  private int posicao;
 
   public Pilha(int quantidade) {
     this.quantidade = quantidade;
