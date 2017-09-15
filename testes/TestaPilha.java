@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.Arrays;
 import java.util.Stack;
 
 enum Cor { PRETO, AZUL, VERMELHO };
@@ -6,14 +6,11 @@ enum Cor { PRETO, AZUL, VERMELHO };
 public class TestaPilha {
   public static void main(String args[]) {
     Stack<Cor> stack = new Stack<>();
-    List<Cor> listaDeCores = stack;
-
-    listaDeCores.add(Cor.PRETO);
-    listaDeCores.add(Cor.AZUL);
-    listaDeCores.add(Cor.VERMELHO);
+    stack.addAll(Arrays.asList(
+      new Cor[] { Cor.PRETO, Cor.AZUL, Cor.VERMELHO }));
 
     System.out.println("Apos preencher a lista:");
-    for (Cor cor: listaDeCores) {
+    for (Cor cor: stack) {
       System.out.println(cor);
     }
 
