@@ -1,5 +1,7 @@
-= Exemplos de Java Básico (desenvolvidos para equipe da Valec)
+= Java Fundamental Examples
 
-== Links interessantes
+== Links
 
+* https://docs.oracle.com/javase/tutorial/
 * http://www.argonavis.com.br/download/java2.html
+* https://www.instagram.com/p/BZCXcB1FCiN/?taken-by=paulojeronimo_
