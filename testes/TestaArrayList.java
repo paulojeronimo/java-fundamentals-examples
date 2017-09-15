@@ -15,13 +15,13 @@ class Empresa {
 
 public class TestaArrayList {
   public static void main(String[] a) {
-    ArrayList empresas = new ArrayList();
+    ArrayList<Empresa> empresas = new ArrayList<>();
 
     empresas.add(new Empresa("Oracle"));
     empresas.add(new Empresa("RedHat"));
     empresas.add(new Empresa("IBM"));
 
-    for(Object empresa: empresas)
+    for(Empresa empresa: empresas)
       System.out.println(empresa);
   }
 }
