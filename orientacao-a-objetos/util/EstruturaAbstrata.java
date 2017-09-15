@@ -1,6 +1,6 @@
 package util;
 
-abstract class EstruturaAbstrata implements InsereContemRemove {
+abstract class EstruturaAbstrata implements Lista {
   protected int quantidade;
   protected Object[] objects;
   protected int posicao;

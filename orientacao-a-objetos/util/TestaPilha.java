@@ -4,7 +4,7 @@ enum Cor { PRETO, AZUL, VERMELHO }
 
 public class TestaPilha {
   public static void main(String[] args) {
-    InsereContemRemove pilhaDeCores = new Pilha(3);
+    Lista pilhaDeCores = new Pilha(3);
 
     pilhaDeCores.inserir(Cor.PRETO);
     pilhaDeCores.inserir(Cor.AZUL);

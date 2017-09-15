@@ -2,7 +2,7 @@ package util;
 
 public class TestaFila {
   public static void main(String[] args) {
-    InsereContemRemove filaDeCores = new FilaDeTeste(3);
+    Lista filaDeCores = new FilaDeTeste(3);
 
     filaDeCores.inserir(Cor.PRETO);
     filaDeCores.inserir(Cor.AZUL);

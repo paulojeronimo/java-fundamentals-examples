@@ -1,6 +1,6 @@
 package util;
 
-public interface InsereContemRemove {
+public interface Lista {
   boolean inserir(Object object);
   boolean contemObjetos();
   public Object remover();
