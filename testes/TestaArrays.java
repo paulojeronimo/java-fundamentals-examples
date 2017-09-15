@@ -7,8 +7,6 @@ public class TestaArrays {
       new String[] { "one", "two", "three" });
 
     System.out.println("Elementos da lista:");
-    for (String num: myList) {
-      System.out.println(num);
-    }
+    myList.forEach(x -> System.out.println(x));
   }
 }
