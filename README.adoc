@@ -1,5 +1,7 @@
 = Java Fundamental Examples
 
+Java 8 samples. Very basic and didatic. Written in Brazilian Portuguese for my Brazilian customers.
+
 == Links
 
 * https://docs.oracle.com/javase/tutorial/
