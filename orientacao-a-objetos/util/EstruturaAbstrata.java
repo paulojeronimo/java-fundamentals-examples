@@ -10,6 +10,12 @@ abstract class EstruturaAbstrata implements Lista {
     objects = new Object[quantidade];
   }
 
+  public void paraCadaItem(Operacao operacao) {
+    for (Object o: objects) {
+      operacao.executar(o);
+    }
+  }
+
   public boolean inserir(Object object) {
     if (posicao >= quantidade) return false;
     objects[posicao++] = object;
