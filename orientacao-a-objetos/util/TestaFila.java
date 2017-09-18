@@ -10,13 +10,11 @@ public class TestaFila {
   public static void main(String[] args) {
     Lista filaDeCores = new FilaDeTeste(3);
 
-    ImpressoraDeItens imp = new ImpressoraDeItens();
-
     filaDeCores.inserir(Cor.PRETO);
     filaDeCores.inserir(Cor.AZUL);
     filaDeCores.inserir(Cor.VERMELHO);
 
-    filaDeCores.paraCadaItem(imp);
+    filaDeCores.paraCadaItem(new ImpressoraDeItens());
 
     Cor cor = null;
     while (filaDeCores.contemObjetos())
