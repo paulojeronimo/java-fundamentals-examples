@@ -5,11 +5,9 @@ public class Relogio {
 
   public void ligar() {
     estado = true;
-    System.out.println("O relogio esta ligado!");
   }
   public void desligar() {
     estado = false;
-    System.out.println("O relogio esta desligado!");
   }
   public boolean getEstado() { return estado; }
 }
