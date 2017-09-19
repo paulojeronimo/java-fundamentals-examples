@@ -1,3 +1,5 @@
+package testes;
+
 import interfaces.*;
 
 public class TestaAparelhoEletronico {

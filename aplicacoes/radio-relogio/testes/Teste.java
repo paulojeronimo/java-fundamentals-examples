@@ -1,3 +1,5 @@
+package testes;
+
 import objetos.*;
 
 public class Teste {
