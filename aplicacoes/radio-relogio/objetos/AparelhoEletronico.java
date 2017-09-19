@@ -4,11 +4,12 @@ public class AparelhoEletronico {
   private boolean estado;
 
   public void ligar() {
-    estado = true;
+    setEstado(true);
   }
   public void desligar() {
-    estado = false;
+    setEstado(false);
   }
+  protected void setEstado(boolean estado) { this.estado = estado; }
   public boolean getEstado() { return estado; }
 }
 
