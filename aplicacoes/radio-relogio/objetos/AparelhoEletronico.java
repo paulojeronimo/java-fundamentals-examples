@@ -1,14 +1,7 @@
 package objetos;
 
-public class AparelhoEletronico implements AparelhoEletronicoIntf {
-  private boolean estado;
-
-  public void ligar() {
-    setEstado(true);
-  }
-  public void desligar() {
-    setEstado(false);
-  }
-  protected void setEstado(boolean estado) { this.estado = estado; }
-  public boolean getEstado() { return estado; }
+public interface AparelhoEletronico {
+  void ligar();
+  void desligar();
+  boolean getEstado(); 
 }

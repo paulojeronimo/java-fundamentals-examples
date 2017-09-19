@@ -2,13 +2,13 @@ import objetos.*;
 import static objetos.RadioRelogio.Brilho.INTENSO;
 
 public class Teste {
-  static void imprimirEstado(AparelhoEletronicoIntf aparelho) {
+  static void imprimirEstado(AparelhoEletronico aparelho) {
     System.out.println("O aparelho esta " + 
       (aparelho.getEstado()? "ligado": "desligado"));
   }
 
   public static void main(String[] args) {
-    AparelhoEletronicoIntf radioRelogio = new RadioRelogio(new Relogio());
+    AparelhoEletronico radioRelogio = new RadioRelogio(new Relogio());
 
     radioRelogio.ligar();
     
