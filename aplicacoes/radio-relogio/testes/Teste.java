@@ -11,5 +11,8 @@ public class Teste {
 
     TestaRadio testeRadio = new TestaRadio(new Radio());
     testeRadio.testaSintonizar();
+    
+    TestaRelogio testeRelogio = new TestaRelogio(new Relogio());
+    testeRelogio.testaAjustarHoras();
   }
 }
