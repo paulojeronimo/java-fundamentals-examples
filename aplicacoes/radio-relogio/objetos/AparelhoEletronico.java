@@ -1,6 +1,6 @@
 package objetos;
 
-public class AparelhoEletronico {
+public class AparelhoEletronico implements AparelhoEletronicoIntf {
   private boolean estado;
 
   public void ligar() {
@@ -12,4 +12,3 @@ public class AparelhoEletronico {
   protected void setEstado(boolean estado) { this.estado = estado; }
   public boolean getEstado() { return estado; }
 }
-
