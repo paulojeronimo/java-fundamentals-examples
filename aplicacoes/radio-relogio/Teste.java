@@ -1,4 +1,5 @@
 import objetos.*;
+import static objetos.RadioRelogio.Brilho.INTENSO;
 
 public class Teste {
   static void imprimirEstadoDosObjetos(Radio radio) {
@@ -14,7 +15,9 @@ public class Teste {
     imprimirEstadoDosObjetos(radioRelogio);
    
     radioRelogio.desligar();
-
+    //radioRelogio.setBrilho(RadioRelogio.Brilho.INTENSO); <- está ok mas ... huummm :/
+    radioRelogio.setBrilho(INTENSO); // agora sim!
+    
     imprimirEstadoDosObjetos(radioRelogio);
   }
 }

@@ -1,7 +1,7 @@
 package objetos;
 
 public class RadioRelogio extends Radio {
-  enum Brilho { NORMAL, MEDIO, INTENSO, APAGADO };
+  public enum Brilho { NORMAL, MEDIO, INTENSO, APAGADO };
 
   Relogio relogio;
   Brilho brilho;
