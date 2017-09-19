@@ -6,5 +6,8 @@ public class Teste {
       new TestaAparelhoEletronico(new RadioRelogio(new Relogio()));
     teste.testaLigar();
     teste.testaDesligar();
+
+    TestaRadio testeRadio = new TestaRadio(null);
+    testeRadio.testaSintonizar();
   }
 }
