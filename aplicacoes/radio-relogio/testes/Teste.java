@@ -9,7 +9,7 @@ public class Teste {
     teste.testaLigar();
     teste.testaDesligar();
 
-    TestaRadio testeRadio = new TestaRadio(null);
+    TestaRadio testeRadio = new TestaRadio(new Radio());
     testeRadio.testaSintonizar();
   }
 }
