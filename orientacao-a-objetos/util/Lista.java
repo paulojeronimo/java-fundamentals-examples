@@ -1,7 +1,7 @@
 package util;
 
-public interface Lista extends Iteravel {
-  boolean inserir(Object object);
+public interface Lista<T> extends Iteravel {
+  boolean inserir(T object);
   boolean contemObjetos();
-  Object remover();
+  T remover();
 }

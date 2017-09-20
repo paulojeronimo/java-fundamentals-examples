@@ -33,13 +33,17 @@ public class TestaPilhaDeLivros {
     Livro aOrigemDasEspecies = new Livro();
     aOrigemDasEspecies.setTitulo("A Origem das Espécies");
 
-    Pilha estante = new Pilha(2);
+    Pilha<Livro> estante = new Pilha<>(2);
     estante.inserir(matematica1);
     estante.inserir(aOrigemDasEspecies);
 
+    System.out.println("Estes sao os livros na estante:");
+    // impressão dos livros através de uma expressão lambda:
+    estante.paraCadaItem(System.out::println);
+
     Livro livro = null;
     while (estante.contemObjetos()) {
-      livro = (Livro) estante.remover();
+      livro = estante.remover();
       System.out.printf("Agora eu vou ler o livro \"%s\" do(s) autor(es) \"%s\"\n",
         livro.getTitulo(), imprimeAutores(livro.getAutores()));
     }

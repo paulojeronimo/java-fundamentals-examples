@@ -7,4 +7,4 @@ javac util/Pilha.java
 javac entidades/*.java
 
 cd - >/dev/null
-javac -cp ".;$lib" TestaPilhaDeLivros.java
+javac -cp ".;$lib" -Xlint:unchecked TestaPilhaDeLivros.java

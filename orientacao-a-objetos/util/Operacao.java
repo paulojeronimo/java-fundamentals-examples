@@ -1,5 +1,5 @@
 package util;
 
-public interface Operacao {
-  void executar(Object o);
+public interface Operacao<T> {
+  void executar(T o);
 }

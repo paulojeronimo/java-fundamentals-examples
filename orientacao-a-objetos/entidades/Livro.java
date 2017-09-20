@@ -13,4 +13,9 @@ public class Livro {
   public void setAutores(final Autor[] autores) { this.autores = autores; }
 
   // TODO: criar o restante dos gets e sets
+
+  @Override
+  public String toString() {
+    return titulo;
+  }
 }

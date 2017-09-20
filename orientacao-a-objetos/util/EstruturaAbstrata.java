@@ -1,13 +1,13 @@
 package util;
 
-abstract class EstruturaAbstrata implements Lista {
+abstract class EstruturaAbstrata<T> implements Lista<T> {
   protected int quantidade;
-  protected Object[] objects;
+  protected T[] objects;
   protected int posicao;
 
   protected EstruturaAbstrata(int quantidade) {
     this.quantidade = quantidade;
-    objects = new Object[quantidade];
+    objects = (T[]) new Object[quantidade];
   }
 
   public void paraCadaItem(Operacao operacao) {
@@ -16,7 +16,7 @@ abstract class EstruturaAbstrata implements Lista {
     }
   }
 
-  public boolean inserir(Object object) {
+  public boolean inserir(T object) {
     if (posicao >= quantidade) return false;
     objects[posicao++] = object;
     return true;
@@ -26,5 +26,5 @@ abstract class EstruturaAbstrata implements Lista {
     return posicao > 0;
   } 
 
-  public abstract Object remover();
+  public abstract T remover();
 }
