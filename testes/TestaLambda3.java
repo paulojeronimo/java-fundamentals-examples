@@ -19,9 +19,16 @@ public class TestaLambda3 {
     String[] lista = new String[] { "Paulo", "Jose", "Manuel", "Jair", "Roberio" };
     String busca = "a";
 
-    Analisador1.buscarString(lista, busca, new Analisador() {
+    System.out.println("Strings que contem \"a\"");
+    Analisador1.buscarString(lista, busca, (alvo, s) -> alvo.contains(s));
+
+    System.out.println("Strings que terminam com \"o\"");
+    Analisador1.buscarString(lista, "o", (alvo, s) -> alvo.endsWith(s));
+
+    System.out.println("Strings que comecam com \"P\"");
+    Analisador1.buscarString(lista, "P", new Analisador() {
       public boolean analisa(String alvo, String busca) {
-        return alvo.contains(busca);
+        return alvo.startsWith(busca);
       }
     });
   }
