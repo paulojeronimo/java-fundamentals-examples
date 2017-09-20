@@ -10,6 +10,7 @@ public class Teste {
     teste.testaDesligar();
 
     TestaRadio testeRadio = new TestaRadio(new Radio());
+    testeRadio.testaObterAntenasTransmissoras();
     testeRadio.testaSintonizar();
     
     TestaRelogio testeRelogio = new TestaRelogio(new Relogio());
