@@ -1,6 +1,7 @@
 package dao;
 
 import entidades.Pessoa;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,5 +29,10 @@ public class PessoaDAO implements DAO<Pessoa> {
     @Override
     public void remover(Pessoa pessoa) {
         pessoas.remove(pessoa.getId());
+    }
+
+    @Override
+    public Collection<Pessoa> listar() {
+        return pessoas.values();
     }
 }
