@@ -10,7 +10,7 @@ public class PessoaDAO implements DAO<Pessoa> {
     
     @Override
     public void criar(Pessoa pessoa) {
-        pessoa.setId(pessoas.size()-1);
+        pessoa.setId(pessoas.size());
         pessoas.add(pessoa);
     }
     
