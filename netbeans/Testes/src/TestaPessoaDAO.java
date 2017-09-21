@@ -11,7 +11,7 @@ public class TestaPessoaDAO {
             throw new RuntimeException(msg);
     }
     
-    static void testaCriar() {
+    static void testaCriarERemover() {
         System.out.println("testCriar iniciado");
 
         Pessoa manuel = Pessoa.Builder("Manuel").build();
@@ -22,12 +22,18 @@ public class TestaPessoaDAO {
         dao.criar(jose);
         assertEquals("O id do José deveria ser 1", 1, jose.getId());
         
+        dao.remover(manuel);
+        
+        Pessoa paulo = Pessoa.Builder("Paulo").build();
+        dao.criar(paulo);      
+        assertEquals("O id do Paulo deveria ser 2", 2, paulo.getId());
+
         System.out.println("testCriar finalizado com sucesso!");
     }
     
     public static void main(String args[]) {
         try {
-            testaCriar();
+            testaCriarERemover();
         } catch (Throwable t) {
             System.out.println("Algum teste falhou. Mensagem: " + t.getMessage());
         }

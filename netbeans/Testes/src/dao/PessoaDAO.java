@@ -1,17 +1,18 @@
 package dao;
 
 import entidades.Pessoa;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 // CRUD (CREATE, RETRIVE, UPDATE, DELETE) para a classe Pessoa
 public class PessoaDAO implements DAO<Pessoa> {
-    List<Pessoa> pessoas = new ArrayList<>();
+    Map<Integer, Pessoa> pessoas = new HashMap<>();
+    private static int proximoId;
     
     @Override
     public void criar(Pessoa pessoa) {
-        pessoa.setId(pessoas.size());
-        pessoas.add(pessoa);
+        pessoa.setId(proximoId++);
+        pessoas.put(pessoa.getId(), pessoa);
     }
     
     @Override
@@ -21,7 +22,7 @@ public class PessoaDAO implements DAO<Pessoa> {
     
     @Override
     public void atualizar(Pessoa pessoa) {
-        pessoas.set(pessoa.getId(), pessoa);
+        pessoas.put(pessoa.getId(), pessoa);
     }
     
     @Override
