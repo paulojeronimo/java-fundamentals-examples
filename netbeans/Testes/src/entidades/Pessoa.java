@@ -10,10 +10,18 @@ public class Pessoa {
     public enum Sexo {
         MASCULINO, FEMININO
     }
+    private int id; // gerado
     private String nome; // obrigatório
     private int idade; // opcional
     private Pessoa.Sexo sexo; // opcional
 
+    public int getId() {
+        return id;
+    }
+    
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getNome(String nome) {
         return nome;
     }
