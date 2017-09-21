@@ -1,44 +1,9 @@
+
 interface Comando {
-   public void executar(String[] args);
-}
 
-class ComandoNaoEncontrado implements Comando {
-    @Override
-    public void executar(String[] args) {
-        System.out.println("java Pessoa <criar|obter|remover|listar>");
-    }
-}
+    public void executar(String[] args);
 
-class ComandoCriar implements Comando {
-    @Override
-    public void executar(String[] args) {
-        System.out.println("Criando ...");
-    }
-}
-
-class ComandoObter implements Comando {
-    @Override
-    public void executar(String[] args) {
-        System.out.println("Obtendo ...");
-    }
-}
-
-class ComandoRemover implements Comando {
-    @Override
-    public void executar(String[] args) {
-        System.out.println("Removendo ...");
-    }
-}
-
-class ComandoListar implements Comando {
-    @Override
-    public void executar(String[] args) {
-        System.out.println("Listando ...");
-    }
-}
-
-public class Pessoa {
-    static Comando getComando(String comando) {
+    static Comando criar(String comando) {
         if (comando != null && comando.length() > 0) {
             char[] chars = comando.toCharArray();
             chars[0] = Character.toUpperCase(chars[0]);
@@ -51,12 +16,55 @@ public class Pessoa {
         }
         return new ComandoNaoEncontrado();
     }
+}
+
+class ComandoNaoEncontrado implements Comando {
+
+    @Override
+    public void executar(String[] args) {
+        System.out.println("java Pessoa <criar|obter|remover|listar>");
+    }
+}
+
+class ComandoCriar implements Comando {
+
+    @Override
+    public void executar(String[] args) {
+        System.out.println("Criando ...");
+    }
+}
+
+class ComandoObter implements Comando {
+
+    @Override
+    public void executar(String[] args) {
+        System.out.println("Obtendo ...");
+    }
+}
+
+class ComandoRemover implements Comando {
+
+    @Override
+    public void executar(String[] args) {
+        System.out.println("Removendo ...");
+    }
+}
+
+class ComandoListar implements Comando {
+
+    @Override
+    public void executar(String[] args) {
+        System.out.println("Listando ...");
+    }
+}
+
+public class Pessoa {
 
     public static void main(String[] args) {
         if (args.length < 1 || args.length > 2) {
             new ComandoNaoEncontrado().executar(null);
             System.exit(0);
         }
-        getComando(args[0]).executar(args);
+        Comando.criar(args[0]).executar(args);
     }
 }
