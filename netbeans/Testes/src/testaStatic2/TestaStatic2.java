@@ -1,3 +1,5 @@
+package testaStatic2;
+
 class Cor {
   static final Cor PRETO = new Cor("preto");
   static final Cor BRANCO = new Cor("branco");

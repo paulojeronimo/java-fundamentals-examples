@@ -1,3 +1,5 @@
+package testaStatic3;
+
 enum Cor { BRANCO, PRETO, AMARELO }
 
 class BolaDeSinuca {

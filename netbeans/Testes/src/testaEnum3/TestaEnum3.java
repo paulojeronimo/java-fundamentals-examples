@@ -1,3 +1,5 @@
+package testaEnum3;
+
 enum Cor {
   PRETO (0x000000),
   BRANCO (0xFFFFFF),
