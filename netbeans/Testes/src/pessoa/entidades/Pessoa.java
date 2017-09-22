@@ -1,11 +1,6 @@
 package pessoa.entidades;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Pessoa {
-    
-    private static List<Pessoa> pessoas = new ArrayList<>();
 
     public enum Sexo {
         MASCULINO, FEMININO
@@ -18,10 +13,11 @@ public class Pessoa {
     public int getId() {
         return id;
     }
-    
+
     public void setId(int id) {
         this.id = id;
     }
+
     public String getNome(String nome) {
         return nome;
     }
@@ -51,13 +47,7 @@ public class Pessoa {
     }
 
     public static Pessoa.Builder Builder(String nome) {
-        Pessoa pessoa = new Pessoa(nome);
-        Pessoa.pessoas.add(pessoa);
-        return new Pessoa.Builder(pessoa);
-    }
-
-    public static List<Pessoa> getList() {
-        return Pessoa.pessoas;
+        return new Pessoa.Builder(nome);
     }
 
     public static class Builder {
@@ -91,5 +81,5 @@ public class Pessoa {
     public String toString() {
         return nome;
     }
-    
+
 }
