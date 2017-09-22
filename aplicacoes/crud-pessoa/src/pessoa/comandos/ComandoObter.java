@@ -7,8 +7,7 @@ public class ComandoObter extends ComandoAbstrato<Pessoa> {
 
     @Override
     public void executar(String[] args) {
-        System.out.println(Arrays.toString(args));
-        String id = args[1];
+        String id = args[0];
         try {
             System.out.println(getDAO().obter(
                     Integer.parseInt(id)));

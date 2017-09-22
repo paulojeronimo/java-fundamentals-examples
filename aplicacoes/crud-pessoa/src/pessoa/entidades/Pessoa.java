@@ -47,7 +47,7 @@ public class Pessoa {
     }
 
     public static Pessoa.Builder Builder(String nome) {
-        return new Pessoa.Builder(nome);
+        return new Pessoa.Builder(nome.trim());
     }
 
     public static class Builder {
@@ -67,6 +67,30 @@ public class Pessoa {
             return this;
         }
 
+        public Pessoa.Builder sexo(final String sexo) {
+            String sexoUppercase = sexo.trim().toUpperCase();
+            switch (sexoUppercase) {
+                case "M":
+                case "MASCULINO":
+                    return sexo(Sexo.MASCULINO);
+                case "F":
+                case "FEMININO":
+                    return sexo(Sexo.FEMININO);
+                default:
+                    throw new ErroDeValidacao(
+                        String.format("O sexo informado (%s) é inválido!", sexo));
+            }
+        }
+
+        public Pessoa.Builder idade(String idade) {
+            try {
+                return idade(Integer.parseInt(idade.trim()));
+            } catch (NumberFormatException e) {
+                throw new ErroDeValidacao(
+                        String.format("A idade (%s) informada é inválida!", idade));
+            }
+        }
+
         public Pessoa.Builder idade(int idade) {
             pessoa.setIdade(idade);
             return this;
@@ -79,7 +103,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return String.format("%d, %s", id, nome);
+        return String.format("%d, %s, %s, %s", id, nome, idade, sexo);
     }
 
 }

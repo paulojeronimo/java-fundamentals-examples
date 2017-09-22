@@ -7,7 +7,7 @@ public class ComandoRemover extends ComandoAbstrato<Pessoa> {
     @Override
     public void executar(String[] args) {
         try {
-            int id = Integer.parseInt(args[1]);
+            int id = Integer.parseInt(args[0]);
             Pessoa pessoa = getDAO().obter(id);
             getDAO().remover(pessoa);
         } catch (NumberFormatException e) {
