@@ -10,12 +10,14 @@ public interface Comando {
             chars[0] = Character.toUpperCase(chars[0]);
             comando = String.valueOf(chars);
             try {
-                return (Comando) Class.forName("Comando" + comando).newInstance();
+                return (Comando) Class.forName(
+                        Comando.class.getPackage().getName()
+                        + ".Comando" + comando).newInstance();
             } catch (ClassNotFoundException | IllegalAccessException | InstantiationException ex) {
                 //Logger.getLogger(Pessoa.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return new ComandoNaoEncontrado();
     }
-    
+
 }
