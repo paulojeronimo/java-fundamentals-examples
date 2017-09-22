@@ -1,10 +1,9 @@
+package testaBuilder;
 
 import java.util.List;
-import java.util.ArrayList;
 import java.util.function.Predicate;
 
-import entidades.Pessoa;
-import static entidades.Pessoa.Sexo.*;
+import static testaBuilder.Pessoa.Sexo.*;
 
 public class TestaBuilder {
     public static void main(String[] args) {
