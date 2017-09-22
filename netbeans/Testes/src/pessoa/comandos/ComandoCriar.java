@@ -1,10 +1,14 @@
 package pessoa.comandos;
 
-public class ComandoCriar implements Comando {
+import pessoa.entidades.Pessoa;
+
+public class ComandoCriar extends ComandoAbstrato<Pessoa> {
 
     @Override
     public void executar(String[] args) {
-        System.out.println("Criando ...");
+        Pessoa pessoa = Pessoa.Builder(args[1]).build();
+        getDAO().criar(pessoa);
+        System.out.println(getDAO().obter(pessoa.getId()));
     }
 
 }

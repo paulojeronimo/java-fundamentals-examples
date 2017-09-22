@@ -1,10 +1,18 @@
 package pessoa.comandos;
 
-public class ComandoRemover implements Comando {
+import pessoa.entidades.Pessoa;
+
+public class ComandoRemover extends ComandoAbstrato<Pessoa> {
 
     @Override
     public void executar(String[] args) {
-        System.out.println("Removendo ...");
+        try {
+            int id = Integer.parseInt(args[1]);
+            Pessoa pessoa = getDAO().obter(id);
+            getDAO().remover(pessoa);
+        } catch (NumberFormatException e) {
+            System.out.printf("id (%s) inválido!\n", args[1]);
+        }
     }
 
 }

@@ -1,10 +1,12 @@
 package pessoa.comandos;
 
-public class ComandoListar implements Comando {
+import pessoa.entidades.Pessoa;
+
+public class ComandoListar extends ComandoAbstrato<Pessoa> {
 
     @Override
     public void executar(String[] args) {
-        System.out.println("Listando ...");
+        getDAO().listar().forEach(System.out::println);
     }
 
 }

@@ -1,6 +1,6 @@
 package pessoa.comandos;
 
-public class ComandoNaoEncontrado implements Comando {
+public class ComandoNaoEncontrado extends ComandoAbstrato {
     
     @Override
     public void executar(String[] args) {
