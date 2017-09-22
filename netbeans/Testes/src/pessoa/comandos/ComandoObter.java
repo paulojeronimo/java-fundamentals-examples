@@ -1,4 +1,4 @@
-package comandos;
+package pessoa.comandos;
 
 public class ComandoObter implements Comando {
 

@@ -1,4 +1,4 @@
-package comandos;
+package pessoa.comandos;
 
 public interface Comando {
 

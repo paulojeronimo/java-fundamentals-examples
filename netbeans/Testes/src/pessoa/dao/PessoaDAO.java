@@ -1,6 +1,6 @@
-package dao;
+package pessoa.dao;
 
-import entidades.Pessoa;
+import pessoa.entidades.Pessoa;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;

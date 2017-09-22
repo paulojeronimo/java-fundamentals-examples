@@ -1,5 +1,7 @@
-import comandos.Comando;
-import comandos.ComandoNaoEncontrado;
+package pessoa;
+
+import pessoa.comandos.Comando;
+import pessoa.comandos.ComandoNaoEncontrado;
 
 public class Pessoa {
 

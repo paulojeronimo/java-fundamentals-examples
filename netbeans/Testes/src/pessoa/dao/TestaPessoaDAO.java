@@ -1,7 +1,6 @@
+package pessoa.dao;
 
-import dao.DAO;
-import dao.PessoaDAO;
-import entidades.Pessoa;
+import pessoa.entidades.Pessoa;
 import java.util.Collection;
 
 public class TestaPessoaDAO {

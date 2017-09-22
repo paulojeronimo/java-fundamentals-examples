@@ -1,4 +1,4 @@
-package dao;
+package pessoa.dao;
 
 import java.util.Collection;
 
