@@ -3,7 +3,7 @@ package pessoa;
 import pessoa.comandos.Comando;
 import pessoa.comandos.ComandoNaoEncontrado;
 
-public class Pessoa {
+public class Main {
 
     public static void main(String[] args) {
         if (args.length < 1 || args.length > 2) {
